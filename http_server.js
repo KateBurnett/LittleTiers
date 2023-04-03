@@ -23,7 +23,7 @@ let port = process.env.PORT || 3000;
 
 // return all users
 // allow cross-origin resource sharing (CORS)
-app.use(cors());
+//app.use(cors());
 app.get('/data', function (req, res) {
     res.send(db.get('users').value());
 });
