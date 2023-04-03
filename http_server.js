@@ -22,12 +22,11 @@ db.defaults({ users: [] }).write();
 let port = process.env.PORT || 3000;
 
 // return all users
+// allow cross-origin resource sharing (CORS)
+app.use(cors());
 app.get('/data', function (req, res) {
     res.send(db.get('users').value());
 });
-
-// allow cross-origin resource sharing (CORS)
-app.use(cors());
 
 // add user
 app.post('/add', function (req, res) {
