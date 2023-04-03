@@ -1,12 +1,13 @@
-banana
 const express = require('express');
 const app = express();
 const low = require('lowdb');
 const fs = require('lowdb/adapters/FileSync');
 const adapter = new fs('db.json');
 const db = low(adapter);
-//const cors = require('cors');
+const cors = require("cors");
 const { faker } = require('@faker-js/faker');
+
+
 
 // data parser - used to parse post data
 var bodyParser = require('body-parser');
@@ -24,6 +25,7 @@ let port = process.env.PORT || 3000;
 
 // return all users
 // allow cross-origin resource sharing (CORS)
+app.use(cors({ origin: true }));
 //app.use(cors());
 app.get('/data', function (req, res) {
     res.send(db.get('users').value());
