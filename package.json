@@ -2,21 +2,21 @@
   "name": "littletiers",
   "version": "1.0.0",
   "description": "little tiers",
-  "main": "http_server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node http_server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kogsio/littletiers.git",
     "build": "npm install",
-    "start": "node http_server.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "14.x"
   },
-  "author": "abel@mit.edu",
+  "author": "catherineburnett18@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kogsio/littletiers/issues"
